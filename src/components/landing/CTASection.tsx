@@ -35,14 +35,15 @@ export const CTASection = () => {
   initial={{ scale: 0 }}
   animate={isInView ? { scale: 1 } : {}}
   transition={{ duration: 0.5, type: 'spring' }}
-  className="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-8"
+  className="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-8 overflow-hidden"
 >
   <img
     src={BaseFinLogo}
     alt="BaseFin"
-    className="w-15 h-15 object-contain"
+    className="w-20 h-20 object-contain"
   />
 </motion.div>
+
 
 
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
