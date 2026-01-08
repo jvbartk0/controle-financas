@@ -19,12 +19,12 @@ export const SignupNotifications = () => {
 
   const getRandomName = useCallback(() => {
     const availableNames = names.filter(name => !usedNames.has(name));
-    
+
     if (availableNames.length === 0) {
       setUsedNames(new Set());
       return names[Math.floor(Math.random() * names.length)];
     }
-    
+
     return availableNames[Math.floor(Math.random() * availableNames.length)];
   }, [usedNames]);
 
@@ -32,24 +32,27 @@ export const SignupNotifications = () => {
     const name = getRandomName();
     setUsedNames(prev => new Set([...prev, name]));
     setCurrentNotification(name);
-    
+
+    // Fecha a notificação após 4s
     setTimeout(() => {
       setCurrentNotification(null);
     }, 4000);
+
+    // Agenda a próxima notificação com intervalo aleatório (1 a 15 segundos)
+    const randomDelay = Math.floor(Math.random() * 15000) + 1000;
+    setTimeout(() => {
+      showNotification();
+    }, randomDelay);
   }, [getRandomName]);
 
   useEffect(() => {
-    const initialDelay = setTimeout(() => {
+    // Inicializa a primeira notificação após 5 segundos
+    const initialTimeout = setTimeout(() => {
       showNotification();
     }, 5000);
 
-    const interval = setInterval(() => {
-      showNotification();
-    }, 12000);
-
     return () => {
-      clearTimeout(initialDelay);
-      clearInterval(interval);
+      clearTimeout(initialTimeout);
     };
   }, [showNotification]);
 
