@@ -39,7 +39,7 @@ export const SignupNotifications = () => {
     }, 4000);
 
     // Agenda a próxima notificação com intervalo aleatório (1 a 15 segundos)
-    const randomDelay = Math.floor(Math.random() * 15000) + 1000;
+    const randomDelay = Math.floor(Math.random() * 30000) + 5000;
     setTimeout(() => {
       showNotification();
     }, randomDelay);
