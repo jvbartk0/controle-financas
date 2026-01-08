@@ -48,7 +48,7 @@ export const LandingHeader = () => {
               <Link to="/auth">Entrar na minha conta</Link>
             </Button>
             <Button asChild className="bg-primary hover:bg-primary/90">
-              <Link to="/auth?mode=signup">Assinar</Link>
+              <Link to="https://wa.me/5546988058511">Assinar</Link>
             </Button>
           </div>
 
