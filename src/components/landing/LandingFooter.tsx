@@ -22,7 +22,7 @@ export const LandingFooter = () => {
     <img
       src={BaseFinLogo}
       alt="BaseFin"
-      className="w-9 h-9 object-contain"
+      className="w-14 h-14 object-contain"
     />
   </div>
   <span className="text-xl font-bold">BaseFin</span>
