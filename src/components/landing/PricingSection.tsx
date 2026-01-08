@@ -92,7 +92,7 @@ export const PricingSection = () => {
               asChild 
               className="w-full bg-primary hover:bg-primary/90 text-lg py-6 rounded-xl"
             >
-              <Link to="/auth?mode=signup">
+              <Link to="https://wa.me/5546988058511">
                 Começar agora
               </Link>
             </Button>
