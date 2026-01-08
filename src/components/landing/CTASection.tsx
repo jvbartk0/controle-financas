@@ -59,8 +59,8 @@ export const CTASection = () => {
               asChild 
               className="bg-primary hover:bg-primary/90 text-lg px-10 py-7 rounded-xl group"
             >
-              <Link to="/auth?mode=signup">
-                Começar agora — É grátis por 7 dias
+              <Link to="https://wa.me/5546988058511">
+                Começar agora — 7 Dias de garantia
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
