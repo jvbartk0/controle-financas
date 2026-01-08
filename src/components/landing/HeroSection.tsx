@@ -73,7 +73,7 @@ export const HeroSection = () => {
               asChild 
               className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 rounded-xl group"
             >
-              <Link to="/auth?mode=signup">
+              <Link to="https://wa.me/5546988058511">
                 Começar agora
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
