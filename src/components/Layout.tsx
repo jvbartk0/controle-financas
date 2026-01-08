@@ -78,13 +78,14 @@ export const Layout = ({ children }: LayoutProps) => {
       {/* Desktop Sidebar */}
       <aside className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-64 lg:flex-col border-r bg-card">
         <div className="flex items-center gap-3 p-6 border-b">
-  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-    <img
-      src={BaseFinLogo}
-      alt="BaseFin"
-      className="w-8 h-8 object-contain"
-    />
-  </div>
+  <div className="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+  <img
+    src={BaseFinLogo}
+    alt="BaseFin"
+    className="w-full h-full object-contain"
+  />
+</div>
+
   <span className="text-xl font-bold">BaseFin</span>
 </div>
         <div className="flex-1 p-4">
@@ -117,13 +118,14 @@ export const Layout = ({ children }: LayoutProps) => {
             </SheetTrigger>
             <SheetContent side="left" className="w-64 p-0">
               <div className="flex items-center gap-3 p-6 border-b">
-  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-    <img
-      src={BaseFinLogo}
-      alt="BaseFin"
-      className="w-8 h-8 object-contain"
-    />
-  </div>
+  <div className="w-12 h-12  rounded-xl flex items-center justify-center overflow-hidden">
+  <img
+    src={BaseFinLogo}
+    alt="BaseFin"
+    className="w-full h-full object-contain"
+  />
+</div>
+
   <span className="text-xl font-bold">BaseFin</span>
 </div>
 
