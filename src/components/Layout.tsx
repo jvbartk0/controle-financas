@@ -117,17 +117,30 @@ export const Layout = ({ children }: LayoutProps) => {
             </SheetTrigger>
             <SheetContent side="left" className="w-64 p-0">
               <div className="flex items-center gap-3 p-6 border-b">
-                <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-                  <Wallet className="w-5 h-5 text-primary-foreground" />
-                </div>
-                <span className="text-xl font-bold">BaseFin</span>
-              </div>
+  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+    <img
+      src={BaseFinLogo}
+      alt="BaseFin"
+      className="w-8 h-8 object-contain"
+    />
+  </div>
+  <span className="text-xl font-bold">BaseFin</span>
+</div>
+
               <div className="p-4">
                 <NavContent />
               </div>
             </SheetContent>
           </Sheet>
-          <span className="text-lg font-bold">BaseFin</span>
+          <span className="text-lg font-bold flex items-center gap-2">
+  <img
+    src={BaseFinLogo}
+    alt="BaseFin"
+    className="w-6 h-6 object-contain"
+  />
+  BaseFin
+</span>
+
         </div>
         <ThemeToggle />
       </header>
