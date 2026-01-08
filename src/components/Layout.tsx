@@ -18,6 +18,9 @@ import {
   Calendar,
   Settings
 } from 'lucide-react';
+import BaseFinLogo from '@/assets/baselogo/logo_basefin.png';
+
+
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -75,11 +78,15 @@ export const Layout = ({ children }: LayoutProps) => {
       {/* Desktop Sidebar */}
       <aside className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-64 lg:flex-col border-r bg-card">
         <div className="flex items-center gap-3 p-6 border-b">
-          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-            <Wallet className="w-5 h-5 text-primary-foreground" />
-          </div>
-          <span className="text-xl font-bold">BaseFin</span>
-        </div>
+  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+    <img
+      src={BaseFinLogo}
+      alt="BaseFin"
+      className="w-8 h-8 object-contain"
+    />
+  </div>
+  <span className="text-xl font-bold">BaseFin</span>
+</div>
         <div className="flex-1 p-4">
           <NavContent />
         </div>
