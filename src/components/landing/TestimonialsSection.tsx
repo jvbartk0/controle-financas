@@ -66,43 +66,44 @@ export const TestimonialsSection = () => {
         </motion.div>
       </div>
 
-      {/* Row 1 - Slides Right */}
-      <div className="relative mb-6">
-        <motion.div
-          className="flex"
-          animate={{ x: ['0%', '-33.333%'] }}
-          transition={{
-            x: {
-              duration: 40,
-              repeat: Infinity,
-              ease: 'linear',
-            },
-          }}
-        >
-          {duplicatedRow1.map((testimonial, index) => (
-            <TestimonialCard key={`row1-${index}`} testimonial={testimonial} />
-          ))}
-        </motion.div>
-      </div>
+     {/* Row 1 - Slides Right */}
+<div className="relative mb-6">
+  <motion.div
+    className="flex"
+    animate={{ x: ['0%', '-33.333%'] }}
+    transition={{
+      x: {
+        duration: 30, // ↓ velocidade aumentada
+        repeat: Infinity,
+        ease: 'linear',
+      },
+    }}
+  >
+    {duplicatedRow1.map((testimonial, index) => (
+      <TestimonialCard key={`row1-${index}`} testimonial={testimonial} />
+    ))}
+  </motion.div>
+</div>
 
-      {/* Row 2 - Slides Left */}
-      <div className="relative">
-        <motion.div
-          className="flex"
-          animate={{ x: ['-33.333%', '0%'] }}
-          transition={{
-            x: {
-              duration: 40,
-              repeat: Infinity,
-              ease: 'linear',
-            },
-          }}
-        >
-          {duplicatedRow2.map((testimonial, index) => (
-            <TestimonialCard key={`row2-${index}`} testimonial={testimonial} />
-          ))}
-        </motion.div>
-      </div>
+{/* Row 2 - Slides Left */}
+<div className="relative">
+  <motion.div
+    className="flex"
+    animate={{ x: ['-33.333%', '0%'] }}
+    transition={{
+      x: {
+        duration: 30, // ↓ velocidade aumentada
+        repeat: Infinity,
+        ease: 'linear',
+      },
+    }}
+  >
+    {duplicatedRow2.map((testimonial, index) => (
+      <TestimonialCard key={`row2-${index}`} testimonial={testimonial} />
+    ))}
+  </motion.div>
+</div>
+
     </section>
   );
 };
