@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Wallet, Menu, X } from 'lucide-react';
+import { ReactComponent as BaseFinLogo } from '@/assets/baselogo/logo_basefin.svg';
+
 
 export const LandingHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,16 +32,17 @@ export const LandingHeader = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <motion.div 
-            className="flex items-center gap-3"
-            whileHover={{ scale: 1.02 }}
-          >
-            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-              <Wallet className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold">BaseFin</span>
-          </motion.div>
+         {/* Logo */}
+<motion.div 
+  className="flex items-center gap-3"
+  whileHover={{ scale: 1.02 }}
+>
+  <div className="w-10 h-10 flex items-center justify-center">
+    <BaseFinLogo className="w-6 h-6" />
+  </div>
+  <span className="text-xl font-bold">BaseFin</span>
+</motion.div>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4">
