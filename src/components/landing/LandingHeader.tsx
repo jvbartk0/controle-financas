@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Wallet, Menu, X } from 'lucide-react';
-import { ReactComponent as BaseFinLogo } from '@/assets/baselogo/logo_basefin.svg';
+import BaseFinLogo from '@/assets/baselogo/logo_basefin.png';
+
 
 
 export const LandingHeader = () => {
@@ -38,7 +39,12 @@ export const LandingHeader = () => {
   whileHover={{ scale: 1.02 }}
 >
   <div className="w-10 h-10 flex items-center justify-center">
-    <BaseFinLogo className="w-6 h-6" />
+  <img
+  src={BaseFinLogo}
+  alt="BaseFin"
+  className="w-6 h-6 object-contain"
+/>
+
   </div>
   <span className="text-xl font-bold">BaseFin</span>
 </motion.div>
