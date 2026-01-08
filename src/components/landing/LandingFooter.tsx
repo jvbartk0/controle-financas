@@ -18,7 +18,7 @@ export const LandingFooter = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
 <div className="flex items-center gap-3">
-  <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
     <img
       src={BaseFinLogo}
       alt="BaseFin"
