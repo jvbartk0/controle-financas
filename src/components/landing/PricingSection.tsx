@@ -98,7 +98,7 @@ export const PricingSection = () => {
             </Button>
 
             <p className="text-center text-xs text-muted-foreground mt-4">
-              7 dias grátis para você testar
+              7 dias de garantia
             </p>
           </div>
         </motion.div>
