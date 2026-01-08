@@ -42,7 +42,7 @@ export const LandingHeader = () => {
   <img
   src={BaseFinLogo}
   alt="BaseFin"
-  className="w-8 h-8 object-contain"
+  className="w-14 h-14 object-contain"
 />
 
   </div>
