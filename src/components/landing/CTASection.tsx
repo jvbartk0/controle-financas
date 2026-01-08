@@ -35,7 +35,7 @@ export const CTASection = () => {
   initial={{ scale: 0 }}
   animate={isInView ? { scale: 1 } : {}}
   transition={{ duration: 0.5, type: 'spring' }}
-  className="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-8 overflow-hidden"
+  className="w-20 h-20 rounded-2xl  flex items-center justify-center mx-auto mb-8 overflow-hidden"
 >
   <img
     src={BaseFinLogo}
