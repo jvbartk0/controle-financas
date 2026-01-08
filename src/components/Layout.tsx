@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { useProfile } from '@/hooks/useProfile';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -23,7 +24,7 @@ interface LayoutProps {
 }
 
 const navItems = [
-  { href: '/', label: 'Dashboard', icon: LayoutDashboard },
+  { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/transactions', label: 'Transações', icon: ArrowLeftRight },
   { href: '/cards', label: 'Cartões', icon: CreditCard },
   { href: '/installments', label: 'Parcelamentos', icon: Calendar },
@@ -77,7 +78,7 @@ export const Layout = ({ children }: LayoutProps) => {
           <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
             <Wallet className="w-5 h-5 text-primary-foreground" />
           </div>
-          <span className="text-xl font-bold">FinControl</span>
+          <span className="text-xl font-bold">BaseFin</span>
         </div>
         <div className="flex-1 p-4">
           <NavContent />
@@ -112,14 +113,14 @@ export const Layout = ({ children }: LayoutProps) => {
                 <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
                   <Wallet className="w-5 h-5 text-primary-foreground" />
                 </div>
-                <span className="text-xl font-bold">FinControl</span>
+                <span className="text-xl font-bold">BaseFin</span>
               </div>
               <div className="p-4">
                 <NavContent />
               </div>
             </SheetContent>
           </Sheet>
-          <span className="text-lg font-bold">FinControl</span>
+          <span className="text-lg font-bold">BaseFin</span>
         </div>
         <ThemeToggle />
       </header>
@@ -133,6 +134,7 @@ export const Layout = ({ children }: LayoutProps) => {
           {children}
         </div>
       </main>
+      <FloatingWhatsApp />
     </div>
   );
 };

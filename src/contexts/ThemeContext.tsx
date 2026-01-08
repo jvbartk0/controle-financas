@@ -11,15 +11,15 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<Theme>(() => {
-    const stored = localStorage.getItem('fincontrol-theme');
-    return (stored as Theme) || 'light';
+    const stored = localStorage.getItem('basefin-theme');
+    return (stored as Theme) || 'dark';
   });
 
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove('light', 'dark');
     root.classList.add(theme);
-    localStorage.setItem('fincontrol-theme', theme);
+    localStorage.setItem('basefin-theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {

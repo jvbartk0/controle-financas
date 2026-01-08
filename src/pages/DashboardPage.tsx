@@ -4,7 +4,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Layout } from '@/components/Layout';
 import { Dashboard } from '@/components/Dashboard';
 
-const Index = () => {
+const DashboardPage = () => {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
 
@@ -33,4 +33,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default DashboardPage;
