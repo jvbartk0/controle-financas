@@ -33,7 +33,7 @@ export const LandingFooter = () => {
             <a href="#" className="hover:text-foreground transition-colors">
               Suporte
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="https://wa.me/5546988058511" className="hover:text-foreground transition-colors">
               Contato
             </a>
           </nav>
